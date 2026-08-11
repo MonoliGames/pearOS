@@ -1,6 +1,6 @@
 # pearOS
 
-pearOS is a html-based recreation of macOS Big Sur's user interface.
+[pearOS](https://monoligames.github.io/pearOS/) is a html-based recreation of macOS Big Sur's user interface.
 
 Currently this project only contains a boot screen animation, but I am working on making the lockscreen, then i will move to working on the desktop.
 
