@@ -1,0 +1,15 @@
+.lock-screen {
+    width: 100vw;
+    height: 100vh;
+    background: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999998;
+}
+
+.lock-screen h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+}
