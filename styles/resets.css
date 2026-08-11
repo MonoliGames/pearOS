@@ -1,0 +1,40 @@
+/* 
+
+Housekeeping Styles 
+
+General rules along with :root variabled defined
+
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #fff;
+}
+
+.hide {
+    display: none !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url("../assets/Light.png") center center / cover no-repeat;
+}
+
+html[data-theme="dark"] body {
+    background: url("../assets/Dark.png") center center / cover no-repeat;
+}

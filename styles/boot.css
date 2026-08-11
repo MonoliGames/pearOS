@@ -1,0 +1,168 @@
+.boot-screen {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999999999;
+
+    background: black;
+}
+
+
+/* -------------------------
+   Initial state
+------------------------- */
+
+.boot-screen .perms-text {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 125%;
+}
+
+.boot-screen .content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boot-screen .content img {
+    width: 10%;
+}
+
+
+/* -------------------------
+   Progress bar
+------------------------- */
+
+@property --progress {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+.boot-screen .content .progress-bar {
+    --progress: 0%;
+
+    border-radius: 100px;
+    width: 5.25%;
+    height: 5px;
+
+    background: linear-gradient(
+        to right,
+        white 0%,
+        white var(--progress),
+        #c7c7cc var(--progress),
+        #c7c7cc 100%
+    );
+
+    opacity: 0;
+}
+
+
+/* -------------------------
+   Animations ONLY after
+   .started is added
+------------------------- */
+
+.boot-screen.started {
+    animation: bootScreen 20s linear forwards;
+}
+
+.boot-screen.started .content img {
+    animation: bootLoadIcon 17s ease-in forwards;
+}
+
+.boot-screen.started .content .progress-bar {
+    animation: bootLoadBar 15s linear forwards;
+}
+
+
+/* -------------------------
+   Progress animation
+------------------------- */
+
+@keyframes bootLoadBar {
+    0% {
+        opacity: 1;
+        --progress: 0%;
+    }
+
+    20% {
+        --progress: 0%;
+    }
+
+    32% {
+        --progress: 20%;
+    }
+
+    50% {
+        --progress: 20%;
+    }
+
+    80% {
+        --progress: 70%;
+    }
+
+    87% {
+        --progress: 70%;
+    }
+
+    99.9% {
+        --progress: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* -------------------------
+   Icon animation
+------------------------- */
+
+@keyframes bootLoadIcon {
+    0% {
+        opacity: 1;
+    }
+
+    98% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* -------------------------
+   Screen animation
+------------------------- */
+
+@keyframes bootScreen {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
