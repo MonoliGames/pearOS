@@ -7,10 +7,15 @@
         <link rel="stylesheet" href="styles/font-imports.css">
         <link rel="stylesheet" href="styles/resets.css">
         <link rel="stylesheet" href="styles/boot.css">
-        <link rel="stylesheet" href="styles/lock-screen.css">
+        <link rel="stylesheet" href="styles/menubar.css">
+        <link rel="stylesheet" href="styles/dock.css">
+        <link rel="stylesheet" href="styles/windows.css">
         <script src="scripts/utils/colors.js"></script>
+        <script src="scripts/utils/time.js"></script>
         <script src="scripts/utils/boot-sound.js"></script>
         <script src="scripts/boot.js"></script>
+        <script src="scripts/dock.js"></script>
+        <script src="scripts/windows.js"></script>
     </head>
     <body>
         <div class="boot-screen">
@@ -24,10 +29,50 @@
                 </div>
             </div>
         </div>
-        <div class="lock-screen">
-            <h1 class="time-display">lock screen and desktop coming soon!</h1>
-        </div>
         <div class="os-container">
+            <div class="menubar">
+                <div class="left">
+                    <button class="pear"></button>
+                    <button class="finder">Findit</button>
+                    <button class="1">File</button>
+                    <button class="2">Edit</button>
+                    <button class="3">View</button>
+                    <button class="4">Go</button>
+                    <button class="5">Window</button>
+                    <button class="6">Help</button>
+                </div>
+                <div class="right">
+                    <p class="formatted-date-display">Error displaying date</p>
+                    <p class="time-display-d12hd">Error displaying time</p>
+                </div>
+            </div>
+
+            <div class="dock">
+                <div class="icon" style="--i:1;"></div>
+                <div class="icon" style="--i:2;"></div>
+                <div class="icon" style="--i:3;"></div>
+                <div class="icon" style="--i:4;"></div>
+                <div class="icon" style="--i:5;"></div>
+                <div class="icon" style="--i:6;"></div>
+                <div class="icon" style="--i:7;"></div>
+                <div class="icon" style="--i:8;"></div>
+
+                <div class="divider"></div>
+
+                <div class="icon" style="--i:9;"></div>
+            </div>
+
+            <div class="windows">
+                <div class="window">
+                    <div class="controls">
+                        <div class="left">
+                            <button class="close"></button>
+                            <button class="minimize"></button>
+                            <button class="maximize"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

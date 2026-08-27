@@ -126,7 +126,6 @@ function applyTheme(isDark) {
     : 'light';
 }
 
-// Keep `window.dark` compatible with your original API.
 Object.defineProperty(window, 'dark', {
   configurable: true,
 

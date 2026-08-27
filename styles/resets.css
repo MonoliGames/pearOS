@@ -38,3 +38,11 @@ body {
 html[data-theme="dark"] body {
     background: url("../assets/Dark.png") center center / cover no-repeat;
 }
+
+.os-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

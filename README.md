@@ -1,10 +1,8 @@
 # pearOS
 
-pearOS is a html-based recreation of macOS Big Sur's user interface.
+[pearOS](https://monoligames.github.io/pearOS/) is a html-based recreation of macOS Big Sur's user interface.
 
-Currently this project only contains a boot screen animation, but I am working on making the lockscreen, then i will move to working on the desktop.
-
-
+Currently this project only contains a boot screen animation and the UI, but I still need to add the icon scaling, window management, and function to the rest of the system.
 
 # Credits
 
@@ -13,6 +11,10 @@ Currently this project only contains a boot screen animation, but I am working o
 UI design concepts and asset inspiration belong to Apple's macOS Big Sur
 
 ### Images & other assets
+
+#### Trash Icon
+
+Made in Blender by me (.blend file in `assets/`)
 
 #### Pear logo
 

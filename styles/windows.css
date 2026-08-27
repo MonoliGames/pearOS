@@ -1,0 +1,62 @@
+.windows {
+    width: 100vw;
+    height: calc(
+        100vh - 
+        32px  /* Menubar height */ - 
+        125px /* Dock height */    - 
+        50px  /* Padding */
+    );
+    position: absolute;
+    top: 32px;
+    left: 0;
+    overflow: shown;
+}
+
+.windows .window {
+    position: absolute;
+    min-width: 195px;
+    min-height: 195px;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    border: 2px solid rgba(var(--gray-5), 0.5);
+    background: rgb(var(--gray-6));
+    overflow: auto;
+    resize: both;
+}
+
+.window .controls {
+    height: 50px;
+    padding: 15px 2px 0 8px;
+    background-image: linear-gradient(to bottom, rgba(var(--opaque-separator), 0.5), rgba(var(--opaque-separator), 0.25), rgba(var(--opaque-separator), 0), rgba(var(--opaque-separator), 0));
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid rgba(var(--gray-5), 0.1);
+}
+
+.window .controls .left button {
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.window .controls .left .close {
+    background: hsl(0, 52%, 44%);
+    border: 2px solid hsl(0, 50%, 29%);
+}
+
+.window .controls .left .minimize {
+    background: hsl(44, 52%, 44%);
+    border: 2px solid hsl(44, 50%, 29%);
+}
+
+.window .controls .left .maximize {
+    background: hsl(121, 52%, 44%);
+    border: 2px solid hsl(121, 50%, 29%);
+}
+
+.windows .window:nth-child(1) {
+    top: 150px;
+    left: 225px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pearOS Calculator</title>
+        <link rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                border: 0;
+                color: white;
+                font-weight: 500;
+                font-family: "Inter", sans-serif;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                background: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                width: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .container h1 {
+                font-size: 75px;
+                text-align: right;
+                width: 100%;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                width: 500px;
+                height: 350px;
+                gap: 7px;
+            }
+
+            .grid-container button {
+                background: rgb(74, 74, 74);
+                border-radius: 100px;
+                font-size: 30px;
+            }
+
+            .grid-container button:nth-child(1), 
+            .grid-container button:nth-child(2), 
+            .grid-container button:nth-child(3) { 
+                background: rgb(143, 143, 143);
+            }
+
+            .grid-container button:nth-child(4),
+            .grid-container button:nth-child(8),
+            .grid-container button:nth-child(12),
+            .grid-container button:nth-child(16),
+            .grid-container button:nth-child(20) {
+                background: rgb(255, 153, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="equation">0</h1>
+            <div class="grid-container">
+                <button>⌫</button>
+                <button>AC</button> <button>%</button> <button>÷</button>
+                <button>7</button>
+                <button>8</button> <button>9</button> <button>X</button>
+                <button>4</button>
+                <button>5</button> <button>6</button> <button>—</button>
+                <button>1</button> <button>2</button> <button>3</button>
+                <button>+</button> <button>+/-</button> <button>0</button>
+                <button>.</button> <button>=</button>
+            </div>
+        </div>
+    </body>
+</html>
