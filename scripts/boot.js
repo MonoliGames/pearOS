@@ -1,4 +1,4 @@
-let showBoot = true;
+let showBoot = false;
 
 function boot() {
     const bootScreen = document.querySelector('.boot-screen');
